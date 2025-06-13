@@ -11,7 +11,7 @@ const headerTitle = document.querySelector(".headerContent a");
 const filterBtnArrow = document.querySelector(".searchAndFilter .filter i");
 const regionLinks = document.querySelector(".searchAndFilter .regionLinks");
 
-const ApiURL = "https://restcountries.com/v3.1/all?fields=name,flags,region,capital,population";
+
 
 if (regionName) {
   ApiURL = `https://restcountries.com/v3.1/region/${regionName}`;
