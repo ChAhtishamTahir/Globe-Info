@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --backgroundColor: #fafafa;
+  --textColor: black;
+  --elementsBackgroundColor: white;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+}
+body.darkMode {
+  --backgroundColor: #202d36;
+  --textColor: white;
+  --elementsBackgroundColor: #2b3743;
+}
+/* ! Header */
+header {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+  background-color: var(--elementsBackgroundColor);
+  padding: 0.3rem;
+}
+header .headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 85%;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+}
+header a {
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 800;
+  text-decoration-line: none;
+  color: inherit;
+}
+header p {
+  cursor: pointer;
+}
+
+/* ! Page Design */
+main {
+  max-width: 85%;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+.backButton {
+  display: inline-block;
+  width: 10%;
+  padding: 0.5em;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+  border-radius: 5px;
+  margin-block: 3rem;
+  cursor: pointer;
+  text-decoration-line: none;
+  color: inherit;
+  background-color: var(--elementsBackgroundColor);
+}
+.lightMode{
+  display: none;
+}
+.countryContainer {
+  display: flex;
+  gap: 8%;
+}
+.countryContainer b {
+  font-weight: 600;
+}
+.flag {
+  width: 45%;
+}
+.countryContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.countryInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 55%;
+}
+.countryInfo .info {
+  display: flex;
+  gap: 2rem;
+  line-height: 1.8;
+}
+.countryInfo .info .left,
+.countryInfo .info .right {
+  flex: 1;
+}
+.borderCountries {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.borderCountriesContainer a {
+  display: inline-block;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+  cursor: pointer;
+  padding: 0.4em;
+  margin-left: 0.6rem;
+  color: inherit;
+  text-decoration-line: none;
+  margin-top: 0.3rem;
+}
+.borderCountriesContainer a.hide {
+  display: none;
+}
+a{
+  background-color: var(--elementsBackgroundColor);
+}
+@media (max-width: 768px) {
+  main .countryContainer {
+    flex-direction: column;
+  }
+  .flag {
+    width: 100%;
+  }
+  .countryInfo .info {
+    flex-direction: column;
+  }
+  .borderCountries {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .countryInfo {
+    justify-content: unset;
+    align-items: unset;
+    width: 100%;
+  }
+  .borderCountries a {
+    min-width: 90px;
+    margin-top: 10px;
+  }
+  .backButton {
+    width: 40%;
+  }
+  header a {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+}

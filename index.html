@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest API Countries</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,600,800"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e0eb0eccfd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="headerContent">
+        <a href="">Where in the World?</a>
+        <p><i class="fa-solid fa-moon"></i>&nbsp;&nbsp;Dark Mode</p>
+        <p class="lightMode"><i class="fa-solid fa-sun"></i>&nbsp;&nbsp;Light Mode</p>
+      </div>
+    </header>
+    <main>
+      <div class="searchAndFilter">
+        <div class="searchBar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search for a Country" />
+        </div>
+        <button class="filter">
+          Filter by Region &nbsp;&nbsp;&nbsp;&nbsp;<i
+            class="fa-solid fa-chevron-down"
+          ></i>
+        </button>
+        <div class="regionLinks">
+          <a href="">Africa</a>
+          <a href="">Europe</a>
+          <a href="">Asia</a>
+          <a href="">Americas</a>
+          <a href="">Oceania</a>
+          <a href="">Antarctic</a>
+        </div>
+      </div>
+      <div class="countriesContainer"></div>
+    </main>
+  </body>
+</html>

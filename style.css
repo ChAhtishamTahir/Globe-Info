@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --bodyColor: black;
+  --bodyBackgroundColor: #fafafa;
+  --elementsColor: white;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--bodyBackgroundColor);
+  color: var(--bodyColor);
+}
+body.darkMode {
+  --bodyBackgroundColor: #202d36;
+  --bodyColor: white;
+  --elementsColor: #2b3743;
+}
+header {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+  background-color: var(--elementsColor);
+  padding: 0.3rem;
+}
+header .headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 85%;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+}
+header a {
+  font-weight: 800;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+header p {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration-line: none;
+}
+/* ! Main  */
+main {
+  max-width: 85%;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+main .countriesContainer {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-inline: auto;
+}
+main .country {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+  cursor: pointer;
+  background-color: var(--elementsColor);
+}
+
+main .flag {
+  height: 9rem;
+  width: 100%;
+}
+main .countryContent {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+main .countryContent h2 {
+  margin-top: 0.5rem;
+}
+main .country .flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0px 0px;
+}
+.lightMode {
+  display: none;
+}
+/*! Search Bar */
+main .searchAndFilter {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--bodyColor);
+  position: relative;
+}
+main .searchBar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  background-color: var(--elementsColor);
+}
+main .searchBar i {
+  padding-left: 1rem;
+}
+main .searchBar input {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 5px;
+  background-color: inherit;
+  color: inherit;
+  &::placeholder {
+    color: var(--bodyColor);
+  }
+}
+/* ! Filter by Region */
+.filter {
+  background-color: var(--elementsColor);
+  color: inherit;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px;
+  padding: 1em;
+  cursor: pointer;
+}
+.filter i {
+  display: none;
+}
+.filter .filterIconDisplay {
+  display: inline;
+}
+.regionLinks {
+  background-color: var(--elementsColor);
+  color: inherit;
+  display: none;
+  position: absolute;
+  width: 16%;
+  top: 135.5%;
+  right: 0%;
+  padding: 0.5rem 2rem;
+}
+.regionLinks a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.regionLinksDisplay {
+  display: block;
+}
+.regionLinks a {
+  display: block;
+}
+
+/* ! Media Queries */
+@media (min-width: 1369px) {
+  main .countriesContainer {
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+  }
+}
+@media (min-width: 1700px) {
+  main .countriesContainer {
+    grid-template-columns: repeat(5, minmax(220px, 1fr));
+  }
+}
+@media (min-width: 2200px) {
+  main .countriesContainer {
+    grid-template-columns: repeat(6, minmax(220px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  header a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  main .searchAndFilter {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 80px;
+    gap: 0.5rem;
+  }
+  main .searchAndFilter .searchBar {
+    width: 100%;
+  }
+  main .regionLinks {
+    background-color: var(--elementsColor);
+    color: inherit;
+    position: absolute;
+    width: 25%;
+    top: 120%;
+    left: 0%;
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  main .regionLinks {
+    width: 40%;
+  }
+}
+
+@media (max-width: 536px) {
+  main,.headerContent{
+  max-width: 75%;
+ }
+
+}
